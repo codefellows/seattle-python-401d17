@@ -1,12 +1,6 @@
-# Intro to Machine Learning
+# Real Time Communication with Sockets
 
-"Machine learning is the study of computer algorithms that improve automatically through experience.
-
-As computing resources become cheaper we can "train" our algorithms to make predictions or decisions without being explicitly programmed to do do." - Wikipedia
-
-In the old days the the cost of computing power was prohibitive, so it was expensive to allow our algorithms to "learn by doing."
-
-These days computing power is cheaper. Though cheap is not the same as free.
+Web Sockets allow the connection between client and server to be kept alive, so both the server and client can send data to each other, without the necessity of creating a new connection every time.
 
 ## Learning Objectives
 
@@ -14,16 +8,9 @@ These days computing power is cheaper. Though cheap is not the same as free.
 
 #### Describe and Define
 
-- Where Machine Learning fits in broader field of Artificial Intelligence.
-- Use cases for Machine Learning.
-- Different Machine Learning Models.
+- Push vs. pull communication.
+- Difference between traditional Web Request Response Cycle and Web Sockets approach.
 
 #### Execute
 
-- Popular Machine Learning tool set.
-- Separate data into testing and training sets.
-- Collect data from remote data sets.
-
-## Today's Outline
-
-<!-- To Be Completed By Instructor -->
+- Build a chat server with FastAPI that uses Web Sockets to enable real time communication between separate applications.
