@@ -32,7 +32,7 @@
 
 #### Advanced Topics
 
-- Class 16 : Web Sockets
+- Class 16 : Serverless Functions
 - Class 17 : Web Scraping
 - Class 18 : Cryptography
 - Class 19 : Automation

@@ -1,6 +1,6 @@
-# Real Time Communication with Sockets
+# Serverless Functions
 
-Web Sockets allow the connection between client and server to be kept alive, so both the server and client can send data to each other, without the necessity of creating a new connection every time.
+As deployment practices evolve `Serverless` computing has emerged as an efficient (in terms of time and money) solution for many projects.
 
 ## Learning Objectives
 
@@ -8,9 +8,12 @@ Web Sockets allow the connection between client and server to be kept alive, so 
 
 #### Describe and Define
 
-- Push vs. pull communication.
-- Difference between traditional Web Request Response Cycle and Web Sockets approach.
+- What is Serverless.
+- How Serverless compares to traditional deployment approaches.
+- Pros and Cons of Serverless Computing.
+- Explain how `Serverless` is not really server-less.
 
 #### Execute
 
-- Build a chat server with FastAPI that uses Web Sockets to enable real time communication between separate applications.
+- Deploy a Serverless function to the cloud.
+- Allow users to interact with Serverless function.
