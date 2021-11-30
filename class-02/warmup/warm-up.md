@@ -4,7 +4,7 @@
 
 ```python
 def reverse_list(things):
-    return revesed_things
+    return reversed_things
 ```
 
 ## Feature Tasks
