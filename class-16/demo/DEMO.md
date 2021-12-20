@@ -1,6 +1,4 @@
-# Serverless Functions
-
-The completed demo is provided for reference. But the live demo should be built out from scratch.
+# Serverless Functions Steps
 
 ## Create Project Skeleton
 
