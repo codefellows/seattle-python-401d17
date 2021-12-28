@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <title>Fast Sockets</title>
+</head>
+
+<body>
+
+  <div id="app" class="container p-4">
+    <input v-model="name" placeholder="name" />
+    <button @click="connect" class="border px-2 py-1 bg-gray-200 rounded-md">Connect</button>
+    <div v-if="websocket">
+      <h2>Messages</h2>
+      <input v-model="message" placeholder="message" />
+      <button @click="sendMessage" class="border px-2 py-1 bg-blue-200 rounded-md">Send</button>
+      <ul id="array-rendering">
+        <li v-for="message in messages">
+          {{ message }}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+
+    const WSURL = 'wss://0st53f.deta.dev'
+    // const WSURL = 'ws://localhost:8000'
+
+    const App = {
+      data() {
+        return {
+          websocket: null,
+          messages: [],
+          message: "",
+          name: "",
+        }
+      },
+      methods: {
+        onMessage(event) {
+          this.messages.push(event.data);
+        },
+        sendMessage(event) {
+          event.preventDefault();
+          this.websocket.send(this.message);
+          this.message = "";
+        },
+        connect() {
+          const client_id = this.name
+          this.websocket = new WebSocket(`${WSURL}/ws/${client_id}`);
+          this.websocket.onmessage = this.onMessage;
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app')
+  </script>
+
+</body>
+
+</html>
