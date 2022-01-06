@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "thing-rater"
+version = "0.1.0"
+description = ""
+authors = ["JB-Tellez <jb.tellez@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.0.1"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
