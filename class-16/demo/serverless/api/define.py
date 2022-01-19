@@ -1,6 +1,8 @@
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import requests
+import json
+
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -15,15 +17,19 @@ class handler(BaseHTTPRequestHandler):
             data = r.json()
             definitions = []
             for word_data in data:
-                definition = word_data["meanings"][0]["definitions"][0]["definition"]
+                definition = word_data["meanings"][0]["definitions"][0][
+                    "definition"
+                ]
                 definitions.append(definition)
-            message = str(definitions)
-            
+            # message = str(definitions)
+            message = json.dumps(definitions)
+            print("message", message)
+
         else:
             message = "Give me a word to define please"
-        
+
         self.send_response(200)
-        self.send_header('Content-type','text/plain')
+        self.send_header("Content-type", "application/json")
         self.end_headers()
 
         self.wfile.write(message.encode())

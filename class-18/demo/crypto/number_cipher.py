@@ -1,12 +1,8 @@
 import random
 
-# chars = ['0'...'9']
-
 
 def encrypt(plain, key):
     encrypted_text = ""
-
-    # 1234 -> 2345 with key of 1
 
     for char in plain:
         num = int(char)
