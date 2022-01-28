@@ -18,7 +18,6 @@ Tools At Your Disposal
   - Restful
   - Others
 - Custom APIs
--
 - ... or teach yourself something totally new this week!
 
 ## Workflow
